@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, IonContent } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -12,7 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public home = [
     {
-      title: 'Ionic Home',
+      title: 'IonicUI Home',
       url: '/home',
     },
   ];
@@ -527,6 +527,8 @@ export class AppComponent {
     },
   ];
 
+  @ViewChild(IonContent, { static: false }) ioncontent: IonContent;
+  
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -541,4 +543,12 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  ScrollToBottom() {
+    this.ioncontent.scrollToBottom(500);
+}
+
+  ScrollToTop() {
+    this.ioncontent.scrollToTop(500);
+}
 }
