@@ -12,7 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public home = [
     {
-      title: 'Default Ionic Home',
+      title: 'Ionic Home',
       url: '/home',
     },
   ];
