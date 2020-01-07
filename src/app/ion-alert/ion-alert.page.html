@@ -3,10 +3,33 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-alert</ion-title>
+    <ion-title>Alert</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-button class="button button-block" (click)="presentAlert()">
+    Show Alert</ion-button>
+    <Br>
+
+  <ion-button class="button button-block" (click)="presentAlertMultipleButtons()">
+    Show Alert Multiple Buttons</ion-button>
+    <Br>
+
+  <ion-button class="button button-block" (click)="presentAlertConfirm()">
+    Show Alert Confirm</ion-button>
+    <Br>
+
+  <ion-button class="button button-block" (click)="presentAlertPrompt()">
+    Show Alert Prompt</ion-button>
+    <Br>
+
+  <ion-button class="button button-block" (click)="presentAlertRadio()">
+    Show Alert Radio</ion-button>
+    <Br>
+  <ion-button class="button button-block" (click)="presentAlertCheckbox()">
+    Show Alert Checkbox</ion-button>
+    <Br>
+                
 
 </ion-content>

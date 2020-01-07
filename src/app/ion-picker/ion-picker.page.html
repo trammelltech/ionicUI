@@ -3,10 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-picker</ion-title>
+    <ion-title>Picker</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-button (click)="openPickerSingle()" expand="block">Single Column</ion-button>
+  <br>
+  <ion-button (click)="openPickerMulti()" expand="block">Multi Column</ion-button>
 </ion-content>

@@ -3,10 +3,60 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-datetime</ion-title>
+    <ion-title>Datetime</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Location"></ion-input>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Start Time</ion-label>
+      <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ends</ion-label>
+      <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Repeat</ion-label>
+      <ion-datetime placeholder="Never" disabled></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Travel Time</ion-label>
+      <ion-datetime placeholder="None" disabled></ion-datetime>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-label>Alert</ion-label>
+      <ion-datetime placeholder="None" disabled></ion-datetime>
+    </ion-item>
+  </ion-list>
+  <br>
+  
+  <ion-header><b>Max/Min</b></ion-header>
+  <i style="color:#b2becd">(min="1994-03-14" max="2012-12-09")</i>
+  <ion-item lines="none">
+    <ion-label position="floating">MM/DD/YYYY</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+  </ion-item>
+  <br />
 
+<ion-header><b>Display & Picker Formats</b></ion-header>
+<br>
+  <table> <thead> <tr> <th>Format</th> <th>Description</th> <th>Example</th> </tr> </thead> <tbody><tr> <td><code>YYYY</code></td> <td>Year, 4 digits</td> <td><code>2018</code></td> </tr> <tr> <td><code>YY</code></td> <td>Year, 2 digits</td> <td><code>18</code></td> </tr> <tr> <td><code>M</code></td> <td>Month</td> <td><code>1</code> ... <code>12</code></td> </tr> <tr> <td><code>MM</code></td> <td>Month, leading zero</td> <td><code>01</code> ... <code>12</code></td> </tr> <tr> <td><code>MMM</code></td> <td>Month, short name</td> <td><code>Jan</code></td> </tr> <tr> <td><code>MMMM</code></td> <td>Month, full name</td> <td><code>January</code></td> </tr> <tr> <td><code>D</code></td> <td>Day</td> <td><code>1</code> ... <code>31</code></td> </tr> <tr> <td><code>DD</code></td> <td>Day, leading zero</td> <td><code>01</code> ... <code>31</code></td> </tr> <tr> <td><code>DDD</code></td> <td>Day, short name</td> <td><code>Fri</code></td> </tr> <tr> <td><code>DDDD</code></td> <td>Day, full name</td> <td><code>Friday</code></td> </tr> <tr> <td><code>H</code></td> <td>Hour, 24-hour</td> <td><code>0</code> ... <code>23</code></td> </tr> <tr> <td><code>HH</code></td> <td>Hour, 24-hour, leading zero</td> <td><code>00</code> ... <code>23</code></td> </tr> <tr> <td><code>h</code></td> <td>Hour, 12-hour</td> <td><code>1</code> ... <code>12</code></td> </tr> <tr> <td><code>hh</code></td> <td>Hour, 12-hour, leading zero</td> <td><code>01</code> ... <code>12</code></td> </tr> <tr> <td><code>a</code></td> <td>12-hour time period, lowercase</td> <td><code>am</code> <code>pm</code></td> </tr> <tr> <td><code>A</code></td> <td>12-hour time period, uppercase</td> <td><code>AM</code> <code>PM</code></td> </tr> <tr> <td><code>m</code></td> <td>Minute</td> <td><code>1</code> ... <code>59</code></td> </tr> <tr> <td><code>mm</code></td> <td>Minute, leading zero</td> <td><code>01</code> ... <code>59</code></td> </tr> <tr> <td><code>s</code></td> <td>Second</td> <td><code>1</code> ... <code>59</code></td> </tr> <tr> <td><code>ss</code></td> <td>Second, leading zero</td> <td><code>01</code> ... <code>59</code></td> </tr> <tr> <td><code>Z</code></td> <td>UTC Timezone Offset</td> <td><code>Z or +HH:mm or -HH:mm</code></td> </tr> </tbody></table>
+<br>
+<ion-header><b>Display Format</b></ion-header>
+<br>
+  <table> <thead> <tr> <th>Display Format</th> <th>Example</th> </tr> </thead> <tbody><tr> <td><code>M-YYYY</code></td> <td><code>6-2005</code></td> </tr> <tr> <td><code>MM/YY</code></td> <td><code>06/05</code></td> </tr> <tr> <td><code>MMM YYYY</code></td> <td><code>Jun 2005</code></td> </tr> <tr> <td><code>YYYY, MMMM</code></td> <td><code>2005, June</code></td> </tr> <tr> <td><code>MMM DD, YYYY HH:mm</code></td> <td><code>Jun 17, 2005 11:06</code></td> </tr> </tbody></table>
 </ion-content>
