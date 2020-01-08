@@ -3,10 +3,16 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-infinite-scroll-content</ion-title>
+    <ion-title>Infinite Scroll Content</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data…">
+      Scroll down to see content example appear...
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

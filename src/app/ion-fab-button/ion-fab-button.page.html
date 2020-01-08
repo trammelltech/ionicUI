@@ -3,10 +3,29 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-fab-button</ion-title>
+    <ion-title>Fab Button</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <!-- Fixed Floating Action Button that does not scroll with the content -->
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button>Button</ion-fab-button>
+  </ion-fab>
+  <br />
+  <!-- Mini -->
+  <ion-fab-button size="small">Mini</ion-fab-button>
+<br>
+  <!-- Colors -->
+  <ion-fab-button color="primary">Primary</ion-fab-button>
+  <br />
+  <ion-fab-button color="secondary">Secondary</ion-fab-button>
+  <br />
+  <ion-fab-button color="danger">Danger</ion-fab-button>
+  <br />
+  <ion-fab-button color="light">Light</ion-fab-button>
+  <br />
+  <ion-fab-button color="dark">Dark</ion-fab-button>
 
 </ion-content>

@@ -3,10 +3,24 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-fab-list</ion-title>
+    <ion-title>Fab List</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button>Share</ion-fab-button>
+  
+    <ion-fab-list side="top">
+      <ion-fab-button>Text</ion-fab-button>
+      <ion-fab-button>123</ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  
+    <ion-fab-list side="start">
+      <ion-fab-button>Vimeo</ion-fab-button>
+    </ion-fab-list>
+  
+  </ion-fab>
 </ion-content>

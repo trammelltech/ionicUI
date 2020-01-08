@@ -12,4 +12,8 @@ export class IonInputPage implements OnInit {
   ngOnInit() {
   }
 
+  register(form:any) {
+    console.log("input on form example");
+  }
+
 }
