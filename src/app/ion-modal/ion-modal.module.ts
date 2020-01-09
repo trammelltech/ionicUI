@@ -8,6 +8,8 @@ import { IonModalPageRoutingModule } from './ion-modal-routing.module';
 
 import { IonModalPage } from './ion-modal.page';
 
+import { ModalpagePage } from '../modalpage/modalpage.page';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,8 @@ import { IonModalPage } from './ion-modal.page';
     IonicModule,
     IonModalPageRoutingModule
   ],
-  declarations: [IonModalPage]
+  declarations: [IonModalPage,
+    ModalpagePage],
+  entryComponents: [ModalpagePage],
 })
 export class IonModalPageModule {}

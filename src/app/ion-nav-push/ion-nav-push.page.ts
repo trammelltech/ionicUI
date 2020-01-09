@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ion-nav-push',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonNavPushPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router,
+  ) { }
 
   ngOnInit() {
   }
 
+  push() {
+    this.router.navigate(['/ion-nav-pop'])
+  }
 }

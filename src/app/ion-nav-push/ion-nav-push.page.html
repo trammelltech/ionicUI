@@ -3,10 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-nav-push</ion-title>
+    <ion-title>Push</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-nav-push (click)="push()">
+    <ion-button>Push Nav Push</ion-button>
+    </ion-nav-push>
 </ion-content>

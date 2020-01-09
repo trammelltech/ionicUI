@@ -406,6 +406,10 @@ const routes: Routes = [
   {
     path: 'api-index',
     loadChildren: () => import('./api-index/api-index.module').then( m => m.ApiIndexPageModule)
+  },
+  {
+    path: 'modalpage',
+    loadChildren: () => import('./modalpage/modalpage.module').then( m => m.ModalpagePageModule)
   }
 ];
 

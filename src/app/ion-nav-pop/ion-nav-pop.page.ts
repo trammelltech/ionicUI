@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-ion-nav-pop',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonNavPopPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public location: Location,
+  ) { }
 
   ngOnInit() {
   }
 
+  pop() {
+    this.location.back();
+  }
 }

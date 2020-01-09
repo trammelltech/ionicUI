@@ -2,11 +2,14 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>ion-nav-pop</ion-title>
+    <ion-title>Pop</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-nav-push (click)="pop()">
+    <ion-button>Push Nav Pop</ion-button>
+    </ion-nav-push>
 </ion-content>
