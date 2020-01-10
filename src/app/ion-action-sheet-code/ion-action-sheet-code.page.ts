@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-action-sheet-code',
@@ -8,7 +9,8 @@ import { ModalController } from '@ionic/angular';
 })
 export class IonActionSheetCodePage implements OnInit {
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController,
+    private iab: InAppBrowser) { }
 
   ngOnInit() {
   }

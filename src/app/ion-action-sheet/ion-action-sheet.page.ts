@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController, ModalController } from '@ionic/angular';
 import { IonActionSheetCodePage } from '../ion-action-sheet-code/ion-action-sheet-code.page';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-action-sheet',
@@ -11,14 +12,19 @@ export class IonActionSheetPage {
 
   constructor(public actionSheetController: ActionSheetController,
     public modalController: ModalController,
+    private iab: InAppBrowser
     ) {}
 
   async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/action-sheet');
+  return browser;
+
+    /*
     const modal = await this.modalController.create({
         component: IonActionSheetCodePage,
         componentProps: { item: Object.assign({}, ) }
     });
-    await modal.present();
+    await modal.present();*/
 }
 
   async presentActionSheet() {

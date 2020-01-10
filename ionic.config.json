@@ -1,5 +1,7 @@
 {
   "name": "ionicUI",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
