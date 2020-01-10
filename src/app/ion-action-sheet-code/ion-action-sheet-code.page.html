@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="dismissCode()">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+  </ion-buttons>
+    <ion-title>Action Sheet Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="primary">
+    <h2 style="font-family:Helvetica Neue">HTML</h2>
+  </ion-text>
+
+  <pre ngNonBindable style="white-space: pre-wrap">
+    &lt;ion-button class="button button-block" (click)="presentActionSheet()"&gt;
+      Show Action Sheet&lt;/ion-button&gt;
+
+      constructor(public actionSheetController: ActionSheetController,
+    public modalController: ModalController,
+    ) &#123;&#125;
+
+    <ion-text color="primary">
+      <h2 style="font-family:Helvetica Neue">ANGULAR</h2>
+    </ion-text>
+    
+    import &#123; Component, OnInit &#125; from '@angular/core';
+    import &#123; ActionSheetController, ModalController &#125; from '@ionic/angular';
+    import &#123; IonActionSheetCodePage &#125; from '../ion-action-sheet-code/ion-action-sheet-code.page';
+    
+    @Component(&#123;
+      selector: 'app-ion-action-sheet',
+      templateUrl: './ion-action-sheet.page.html',
+      styleUrls: ['./ion-action-sheet.page.scss'],
+    &#125;)
+    export class IonActionSheetPage &#123;
+    
+      constructor(public actionSheetController: ActionSheetController,
+        public modalController: ModalController,
+        ) &#123;&#125;
+    
+  async presentCode() &#123;
+    const modal = await this.modalController.create(&#123;
+        component: IonActionSheetCodePage,
+        componentProps: &#123; item: Object.assign(&#123;&#125;, ) &#125;
+    &#125;);
+    await modal.present();
+&#125;
+
+  async presentActionSheet() &#123;
+    const actionSheet = await this.actionSheetController.create(&#123;
+      header: 'Albums',
+      buttons: [&#123;
+        text: 'Delete',
+        role: 'destructive',
+        icon: 'trash',
+        handler: () => &#123;
+          console.log('Delete clicked');
+        &#125;
+      &#125;, &#123;
+        text: 'Share',
+        icon: 'share',
+        handler: () => &#123;
+          console.log('Share clicked');
+        &#125;
+      &#125;, &#123;
+        text: 'Play (open modal)',
+        icon: 'arrow-dropright-circle',
+        handler: () => &#123;
+          console.log('Play clicked');
+        &#125;
+      &#125;, &#123;
+        text: 'Favorite',
+        icon: 'heart',
+        handler: () => &#123;
+          console.log('Favorite clicked');
+        &#125;
+      &#125;, &#123;
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => &#123;
+          console.log('Cancel clicked');
+        &#125;
+      &#125;]
+    &#125;);
+    await actionSheet.present();
+  &#125;
+      </pre>
+</ion-content>

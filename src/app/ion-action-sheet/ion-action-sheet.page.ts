@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, ModalController } from '@ionic/angular';
+import { IonActionSheetCodePage } from '../ion-action-sheet-code/ion-action-sheet-code.page';
 
 @Component({
   selector: 'app-ion-action-sheet',
@@ -8,7 +9,17 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class IonActionSheetPage {
 
-  constructor(public actionSheetController: ActionSheetController) {}
+  constructor(public actionSheetController: ActionSheetController,
+    public modalController: ModalController,
+    ) {}
+
+  async presentCode() {
+    const modal = await this.modalController.create({
+        component: IonActionSheetCodePage,
+        componentProps: { item: Object.assign({}, ) }
+    });
+    await modal.present();
+}
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({

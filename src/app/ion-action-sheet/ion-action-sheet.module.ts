@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { IonActionSheetPageRoutingModule } from './ion-action-sheet-routing.module';
 
 import { IonActionSheetPage } from './ion-action-sheet.page';
+import { IonActionSheetCodePage } from '../ion-action-sheet-code/ion-action-sheet-code.page';
 
 @NgModule({
   imports: [
@@ -15,6 +16,8 @@ import { IonActionSheetPage } from './ion-action-sheet.page';
     IonicModule,
     IonActionSheetPageRoutingModule
   ],
-  declarations: [IonActionSheetPage]
+  declarations: [IonActionSheetPage,
+    IonActionSheetCodePage],
+    entryComponents: [IonActionSheetCodePage]
 })
 export class IonActionSheetPageModule {}

@@ -410,6 +410,10 @@ const routes: Routes = [
   {
     path: 'modalpage',
     loadChildren: () => import('./modalpage/modalpage.module').then( m => m.ModalpagePageModule)
+  },
+  {
+    path: 'ion-action-sheet-code',
+    loadChildren: () => import('./ion-action-sheet-code/ion-action-sheet-code.module').then( m => m.IonActionSheetCodePageModule)
   }
 ];
 
