@@ -3,10 +3,14 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-loading</ion-title>
+    <ion-title>Loading</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-content fullscreen class="ion-padding">
+    <ion-button expand="block" (click)="presentLoading()">Present Loading</ion-button>
+    <br>
+    <ion-button expand="block" (click)="presentLoadingWithOptions()">Loading Options</ion-button>
+  </ion-content>
 </ion-content>

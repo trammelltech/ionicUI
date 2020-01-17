@@ -3,10 +3,45 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-reorder</ion-title>
+    <ion-title>Reorder</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-reorder-group (ionItemReorder)="onRenderItems($event)" disabled="false">
+ 
+      <ion-item *ngFor="let item of listItems">
+        <ion-label>
+          {{item}}
+        </ion-label>
+        <ion-reorder></ion-reorder>
+      </ion-item>
+ 
+    </ion-reorder-group>
+  </ion-list>
 
+  <!-- used live list instead
+  <ion-list class="ion-text-center">
+    <ion-button (click)="getList()">
+      Get Updated List
+    </ion-button>
+  </ion-list>
+-->
+<br>
+move items to watch live changes:
+<br>
+<br>
+  <ion-item *ngFor="let item of listItems">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <strong></strong>
+        </ion-col>
+        <ion-col>
+          {{item}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-item>
 </ion-content>

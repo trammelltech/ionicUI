@@ -12,4 +12,15 @@ export class IonSkeletonTextPage implements OnInit {
   ngOnInit() {
   }
 
+  data: any;
+
+  ionViewWillEnter() {
+    setTimeout(() => {
+      this.data = {
+        'heading': 'Normal text',
+        'para1': 'Lorem ipsum dolor sit amet, consectetur',
+        'para2': 'adipiscing elit.'
+      };
+    }, 5000);
+  }
 }
