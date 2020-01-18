@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonRangePage implements OnInit {
 
+  dualValue: any = { lower: 33, upper: 80 };
+
   constructor() { }
 
   ngOnInit() {
