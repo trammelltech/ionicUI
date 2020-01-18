@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonButtonsPage implements OnInit {
 
+  clickedstar: boolean;
+  clickedsearch: boolean;
+  clickedorion: boolean;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickedStar() {
+    this.clickedstar = ! this.clickedstar
+  }
+
+  clickedSearch() {
+    this.clickedsearch = ! this.clickedsearch
+  }
+
+  clickedOrion() {
+    this.clickedorion = ! this.clickedorion
   }
 
 }

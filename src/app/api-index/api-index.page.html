@@ -8,5 +8,386 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label (click)="ScrollToBottom()" align="right" style="color:#8392a5">
+        <i>to bottom</i></ion-label>
+  </ion-item>
 
+    <ion-item style="color:#b2becd">HOME</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of home">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+  <br>
+  
+    <ion-item style="color:#b2becd">ACTION SHEET</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of actionSheet">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+    
+    <ion-item style="color:#b2becd">ALERT</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of alert">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">BADGE</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of badge">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">BUTTON</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of button">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">CARD</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of card">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">CHECKBOX</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of checkbox">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">CHIP</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of chip">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">DATE AND TIME PICKERS</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of date_and_time_pickers">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">FLOATING ACTION BUTTON</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of floating_action_button">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">GRID</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of grid">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">INFINITE SCROLL</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of infinite_scroll">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">ICONS</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of icons">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">INPUT</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of input">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">ITEM</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of item">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">LIST</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of list">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">MEDIA</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of media">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">MENU</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of menu">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">MODAL</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of modal">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">NAVIGATION</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of navigation">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">POPOVER</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of popover">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">PROGRESS INDICATORS</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of progress_indicators">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">RADIO</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of radio">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">REFRESHER</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of refresher">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">REORDER</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of reorder">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">RANGE</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of range">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">ROUTE</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of route">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">ROUTER</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of router">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">SEARCHBAR</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of searchbar">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">SELECT</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of select">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">SLIDES</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of slides">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">TABS</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of tabs">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">TOAST</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of toast">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">TOGGLE</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of toggle">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">TOOLBAR</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of toolbar">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">TYPOGRAPHY</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of typography">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item style="color:#b2becd">RESOURCES</ion-item>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of api_index">
+      <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-icon slot="start" [name]="p.icon"></ion-icon>
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+
+    <ion-item lines="none">
+      <ion-label (click)="ScrollToTop()" align="right" style="color:#8392a5">
+        <i>to top</i></ion-label>
+  </ion-item>
+  </ion-list>
 </ion-content>

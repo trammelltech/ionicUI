@@ -414,7 +414,23 @@ const routes: Routes = [
   {
     path: 'ion-action-sheet-code',
     loadChildren: () => import('./ion-action-sheet-code/ion-action-sheet-code.module').then( m => m.IonActionSheetCodePageModule)
+  },  {
+    path: 'tab1',
+    loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
+  },
+  {
+    path: 'tab2',
+    loadChildren: () => import('./tab2/tab2.module').then( m => m.Tab2PageModule)
+  },
+  {
+    path: 'tab3',
+    loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
+  },
+  {
+    path: 'back-button-forward',
+    loadChildren: () => import('./back-button-forward/back-button-forward.module').then( m => m.BackButtonForwardPageModule)
   }
+
 ];
 
 @NgModule({

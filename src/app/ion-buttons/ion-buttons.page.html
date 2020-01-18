@@ -3,10 +3,27 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-buttons</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="clickedStar()">
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+      <ion-button (click)="clickedSearch()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Buttons</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary" (click)="clickedOrion()">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<ion-text *ngIf="clickedstar">You are a star</ion-text>
+<br>
+<ion-text *ngIf="clickedsearch">search master</ion-text>
+<br>
+<ion-text *ngIf="clickedorion">orion's belt</ion-text>
 </ion-content>

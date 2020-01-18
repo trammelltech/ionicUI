@@ -3,10 +3,20 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>ion-toast</ion-title>
+    <ion-title>Toast</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-button expand="full" 
+  (click)="showToast('top')">Show Toast Top Position</ion-button>
 
+  <ion-button expand="full" 
+  (click)="showToast('bottom')">Show Toast Bottom Position</ion-button>
+
+  <ion-button expand="full" 
+  (click)="showLongToast()">Show Long Toast</ion-button>
+  
+  <ion-button expand="full" 
+  (click)="showToastWithCloseButton()">Show Toast W/ Close Button</ion-button>
 </ion-content>
