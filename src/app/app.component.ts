@@ -13,6 +13,9 @@ export class AppComponent {
 
   @ViewChild(IonContent, { static: false }) ioncontent: IonContent;
 
+  toggler: any;
+  prefersDark: any;
+
   home: any[];
   actionSheet: any[];
   alert: any[];
@@ -60,6 +63,9 @@ export class AppComponent {
   ) {
     this.initializeApp();
     this.initializeItems();
+
+    this.prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    this.prefersDark.addListener((e) => this.checkToggle(e.matches));
   }
 
   initializeApp() {
@@ -68,6 +74,18 @@ export class AppComponent {
       this.splashScreen.hide();
       this.initializeItems();
     });
+  }
+
+  themeToggle(ev) {
+    document.body.classList.toggle('dark', ev.detail.checked);
+}
+
+  checkToggle(shouldCheck) {
+    this.toggler.checked = shouldCheck;
+    }
+
+  loadApp() {
+  this.checkToggle(this.prefersDark.matches);
   }
 
 filterItems(event) {
