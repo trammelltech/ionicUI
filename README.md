@@ -19,7 +19,5 @@
       </p>
       <br>
       <p>
-        Please feel free to leave feedback or git pull: 
-        <a href="https://github.com/trammelltech/ionicUI">
-          https://github.com/trammelltech/ionicUI</a>
+        Please feel free to leave feedback or git pull
       </p>
