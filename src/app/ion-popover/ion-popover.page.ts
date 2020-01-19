@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { NotificationsComponent } from '../components/notifications/notifications.component';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-popover',
@@ -9,10 +10,17 @@ import { NotificationsComponent } from '../components/notifications/notification
 })
 export class IonPopoverPage implements OnInit {
 
-  constructor(public popoverCtrl: PopoverController) { }
+  constructor(public popoverCtrl: PopoverController,
+    private iab: InAppBrowser,
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/popover');
+  return browser;
+}
 
   async notifications(ev: any) {
     const popover = await this.popoverCtrl.create({

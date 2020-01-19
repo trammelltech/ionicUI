@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-back-button',
@@ -10,10 +11,16 @@ export class IonBackButtonPage implements OnInit {
 
   constructor(
     public router: Router,
-  ) { }
+    private iab: InAppBrowser,
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/back-button');
+  return browser;
+}
 
   go() {
     this.router.navigate(['/back-button-forward'])

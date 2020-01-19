@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-loading',
@@ -8,10 +9,17 @@ import { LoadingController } from '@ionic/angular';
 })
 export class IonLoadingPage implements OnInit {
 
-  constructor(public loadingController: LoadingController) {}
+  constructor(public loadingController: LoadingController,
+    private iab: InAppBrowser,
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/loading');
+  return browser;
+}
   
   async presentLoading() {
     const loading = await this.loadingController.create({

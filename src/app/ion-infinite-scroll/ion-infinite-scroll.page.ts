@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-infinite-scroll',
@@ -12,7 +13,7 @@ export class IonInfiniteScrollPage {
  
   dataList:any;
  
-  constructor() {
+  constructor(private iab: InAppBrowser) {
     this.dataList = [];
     
     for (let i = 0; i < 25; i++) { 
@@ -20,7 +21,10 @@ export class IonInfiniteScrollPage {
     }
   }
  
- 
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/infinite-scroll');
+  return browser;
+}
  
   loadData(event) {
     

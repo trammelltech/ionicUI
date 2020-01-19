@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-reorder',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonReorderPage implements OnInit {
 
-  constructor() {
+  constructor(
+    private iab: InAppBrowser,
+  ) {
     this.listItems = [
       "1. Item 1",
       "2. Item 2",
@@ -20,6 +23,11 @@ export class IonReorderPage implements OnInit {
 
   ngOnInit() {
   }
+
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/reorder');
+  return browser;
+}
 
   listItems: any;
  

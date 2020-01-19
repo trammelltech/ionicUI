@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-alert',
@@ -8,7 +9,17 @@ import { AlertController } from '@ionic/angular';
 })
 export class IonAlertPage {
 
-  constructor(public alertController: AlertController) {}
+  constructor(public alertController: AlertController,
+            private iab: InAppBrowser
+      ) {}
+  
+      ngOnInit() {
+      }
+      
+    async presentCode() {
+      const browser = this.iab.create('https://ionicframework.com/docs/api/alert');
+    return browser;
+  }
 
   async presentAlert() {
     const alert = await this.alertController.create({

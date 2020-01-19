@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-card-content',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonCardContentPage implements OnInit {
 
-  constructor() { }
+  constructor(private iab: InAppBrowser
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/card-content');
+  return browser;
+}
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-modal-controller',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonModalControllerPage implements OnInit {
 
-  constructor() { }
+  constructor(private iab: InAppBrowser,
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/modal-controller');
+  return browser;
+}
 
 }

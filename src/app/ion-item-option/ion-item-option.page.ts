@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-item-option',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonItemOptionPage implements OnInit {
 
-  constructor() { }
+  constructor(private iab: InAppBrowser
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/item-option');
+  return browser;
+}
 
 }

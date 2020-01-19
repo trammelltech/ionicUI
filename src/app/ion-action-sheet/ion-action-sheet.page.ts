@@ -15,6 +15,9 @@ export class IonActionSheetPage {
     private iab: InAppBrowser
     ) {}
 
+    ngOnInit() {
+    }
+    
   async presentCode() {
     const browser = this.iab.create('https://ionicframework.com/docs/api/action-sheet');
   return browser;

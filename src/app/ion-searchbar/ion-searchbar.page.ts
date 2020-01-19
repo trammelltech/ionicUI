@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-searchbar',
@@ -7,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonSearchbarPage implements OnInit {
 
-  constructor() {
+  constructor(private iab: InAppBrowser,
+    ) {
+      this.initializeItems();
+    }
 
-    this.initializeItems();
-   }
-
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/searchbar');
+  return browser;
+}
 
   items: any[];
   items2: any[];

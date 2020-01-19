@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-checkbox',
@@ -7,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IonCheckboxPage implements OnInit {
 
-  constructor() { }
+  constructor(private iab: InAppBrowser
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/checkbox');
+  return browser;
+}
   public form = [
     { val: 'Pepperoni', isChecked: true },
     { val: 'Sausage', isChecked: false },

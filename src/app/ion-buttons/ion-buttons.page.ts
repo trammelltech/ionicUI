@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-buttons',
@@ -11,10 +12,16 @@ export class IonButtonsPage implements OnInit {
   clickedsearch: boolean;
   clickedorion: boolean;
 
-  constructor() { }
+  constructor(private iab: InAppBrowser,
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/buttons');
+  return browser;
+}
 
   clickedStar() {
     this.clickedstar = ! this.clickedstar

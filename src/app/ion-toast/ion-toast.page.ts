@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-toast',
@@ -8,10 +9,17 @@ import { ToastController } from '@ionic/angular';
 })
 export class IonToastPage implements OnInit {
 
-  constructor(private toastController: ToastController) { }
+  constructor(private toastController: ToastController,
+    private iab: InAppBrowser,
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/toast');
+  return browser;
+}
 
   async showToastOnImage() {
     const toast = await this.toastController.create({

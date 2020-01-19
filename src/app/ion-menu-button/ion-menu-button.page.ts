@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-menu-button',
@@ -8,10 +9,17 @@ import { MenuController } from '@ionic/angular';
 })
 export class IonMenuButtonPage implements OnInit {
 
-  constructor(private menu: MenuController) { }
+  constructor(private menu: MenuController,
+    private iab: InAppBrowser,
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/menu-button');
+  return browser;
+}
 
   openMenu() {
     this.menu.toggle();

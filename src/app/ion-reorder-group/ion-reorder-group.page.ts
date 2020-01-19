@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonReorderGroup } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-reorder-group',
@@ -10,10 +11,17 @@ export class IonReorderGroupPage implements OnInit {
 
   @ViewChild(IonReorderGroup, {static: false}) reorderGroup: IonReorderGroup;
   
-  constructor() { }
+  constructor(
+    private iab: InAppBrowser,
+    ) {}
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/reorder-group');
+  return browser;
+}
 
   doReorder(ev: any) {
     // The `from` and `to` properties contain the index of the item

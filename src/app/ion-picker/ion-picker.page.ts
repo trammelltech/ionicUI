@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PickerController } from '@ionic/angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-ion-picker',
@@ -8,7 +9,17 @@ import { PickerController } from '@ionic/angular';
 })
 export class IonPickerPage {
 
-  constructor(public pickerCtrl: PickerController) { }
+  constructor(public pickerCtrl: PickerController,
+    private iab: InAppBrowser,
+    ) {}
+
+    ngOnInit() {
+    }
+    
+  async presentCode() {
+    const browser = this.iab.create('https://ionicframework.com/docs/api/picker');
+  return browser;
+}
   
   async openPickerSingle() {
     let pickerAction;
