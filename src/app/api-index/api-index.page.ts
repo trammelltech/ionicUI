@@ -9,14 +9,313 @@ import { IonContent } from '@ionic/angular';
 })
 export class ApiIndexPage implements OnInit {
 
-  public home = [
+  @ViewChild(IonContent, { static: false }) ioncontent: IonContent;
+
+  home: any[];
+  actionSheet: any[];
+  alert: any[];
+  badge: any[];
+  button: any[];
+  card: any[];
+  checkbox: any[];
+  chip: any[];
+  content: any[];
+  date_and_time_pickers: any[];
+  floating_action_button: any[];
+  grid: any[];
+  infinite_scroll: any[];
+  icons: any[];
+  input: any[];
+  item: any[];
+  list: any[];
+  media: any[];
+  menu: any[];
+  modal: any[];
+  navigation: any[];
+  popover: any[];
+  progress_indicators: any[];
+  radio: any[];
+  range: any[];
+  refresher: any[];
+  reorder: any[];
+  route: any[];
+  router: any[];
+  searchbar: any[];
+  segment: any[];
+  select: any[];
+  slides: any[];
+  tabs: any[];
+  toast: any[];
+  toggle: any[];
+  toolbar: any[];
+  typography: any[];
+  api_index: any[];
+
+  constructor() {
+
+    this.initializeItems();
+   }
+
+  ngOnInit() {
+  }
+
+  filterItems(event) {
+//could be done better but they are static arrays, would not recommend this with non static or 2 way binding arrays
+  this.initializeItems();
+    const val = event.target.value;
+    if (val && val.trim() != '') {
+      this.home = this.home.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+
+    if (val && val.trim() != '') {
+      this.actionSheet = this.actionSheet.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+
+    if (val && val.trim() != '') {
+      this.alert = this.alert.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.badge = this.badge.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.button = this.button.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.card = this.card.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.checkbox = this.checkbox.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.chip = this.chip.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.content = this.content.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.date_and_time_pickers = this.date_and_time_pickers.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.floating_action_button = this.floating_action_button.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.grid = this.grid.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.infinite_scroll = this.infinite_scroll.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.icons = this.icons.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.input = this.input.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.item = this.item.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.list = this.list.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.media = this.media.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.menu = this.menu.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.modal = this.modal.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.navigation = this.navigation.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.popover = this.popover.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.progress_indicators = this.progress_indicators.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.radio = this.radio.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.range = this.range.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.refresher = this.refresher.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.reorder = this.reorder.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.route = this.route.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.router = this.router.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.searchbar = this.searchbar.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.segment = this.segment.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.select = this.select.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.slides = this.slides.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.tabs = this.tabs.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.toast = this.toast.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.toggle = this.toggle.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.toolbar = this.toolbar.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.typography = this.typography.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+    
+    if (val && val.trim() != '') {
+      this.api_index = this.api_index.filter((item: Arrays) => {
+        return (item.title.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
+
+  ScrollToBottom() {
+    this.ioncontent.scrollToBottom(500);
+}
+
+  ScrollToTop() {
+    this.ioncontent.scrollToTop(500);
+}
+
+initializeItems() {
+
+  this.home = [
     {
       title: 'IonicUI Home',
       url: '/home',
     },
   ];
 
-  public actionSheet = [
+  this.actionSheet = [
     {
       title: 'ion-action-sheet',
       url: '/ion-action-sheet',
@@ -27,7 +326,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public alert = [
+  this.alert = [
     {
       title: 'ion-alert',
       url: '/ion-alert',
@@ -38,14 +337,14 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public badge = [
+  this.badge = [
     {
       title: 'ion-badge',
       url: '/ion-badge',
     },
   ];
 
-  public button = [
+  this.button = [
     {
       title: 'ion-button',
       url: '/ion-button',
@@ -56,7 +355,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public card = [
+  this.card = [
     {
       title: 'ion-card',
       url: '/ion-card',
@@ -79,21 +378,21 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public checkbox = [
+  this.checkbox = [
     {
       title: 'ion-checkbox',
       url: '/ion-checkbox',
     },
   ];
 
-  public chip = [
+  this.chip = [
     {
       title: 'ion-chip',
       url: '/ion-chip',
     },
   ];
 
-  public content = [
+  this.content = [
     {
       title: 'ion-app',
       url: '/ion-app',
@@ -104,7 +403,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public date_and_time_pickers = [
+  this.date_and_time_pickers = [
     {
       title: 'ion-datetime',
       url: '/ion-datetime',
@@ -119,7 +418,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public floating_action_button = [
+  this.floating_action_button = [
     {
       title: 'ion-fab',
       url: '/ion-fab',
@@ -134,7 +433,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public grid = [
+  this.grid = [
     {
       title: 'ion-grid',
       url: '/ion-grid',
@@ -149,7 +448,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public infinite_scroll = [
+  this.infinite_scroll = [
     {
       title: 'ion-infinite-scroll',
       url: '/ion-infinite-scroll',
@@ -160,14 +459,14 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public icons = [
+  this.icons = [
     {
       title: 'ion-icons',
       url: '/ionicon',
     },
   ];
 
-  public input = [
+  this.input = [
     {
       title: 'ion-input',
       url: '/ion-input',
@@ -178,7 +477,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public item = [
+  this.item = [
     {
       title: 'ion-item',
       url: '/ion-item',
@@ -213,7 +512,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public list = [
+  this.list = [
     {
       title: 'ion-list',
       url: '/ion-list',
@@ -228,7 +527,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public media = [
+  this.media = [
     {
       title: 'ion-avatar',
       url: '/ion-avatar',
@@ -247,7 +546,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public menu = [
+  this.menu = [
     {
       title: 'ion-menu',
       url: '/ion-menu',
@@ -270,7 +569,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public modal = [
+  this.modal = [
     {
       title: 'ion-modal',
       url: '/ion-modal',
@@ -285,7 +584,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public navigation = [
+  this.navigation = [
     {
       title: 'ion-nav',
       url: '/ion-nav',
@@ -304,7 +603,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public popover = [
+  this.popover = [
     {
       title: 'ion-popover',
       url: '/ion-popover',
@@ -315,7 +614,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public progress_indicators = [
+  this.progress_indicators = [
     {
       title: 'ion-loading',
       url: '/ion-loading',
@@ -338,7 +637,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public radio = [
+  this.radio = [
     {
       title: 'ion-radio',
       url: '/ion-radio',
@@ -349,14 +648,14 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public range = [
+  this.range = [
     {
       title: 'ion-range',
       url: '/ion-range',
     },
   ];
 
-  public refresher = [
+  this.refresher = [
     {
       title: 'ion-refresher',
       url: '/ion-refresher',
@@ -367,7 +666,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public reorder = [
+  this.reorder = [
     {
       title: 'ion-reorder',
       url: '/ion-reorder',
@@ -378,7 +677,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public route = [
+  this.route = [
     {
       title: 'ion-route',
       url: '/ion-route',
@@ -389,7 +688,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public router = [
+  this.router = [
     {
       title: 'ion-router',
       url: '/ion-router',
@@ -404,14 +703,14 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public searchbar = [
+  this.searchbar = [
     {
       title: 'ion-searchbar',
       url: '/ion-searchbar',
     },
   ];
 
-  public segment = [
+  this.segment = [
     {
       title: 'ion-segment',
       url: '/ion-segment',
@@ -422,7 +721,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public select = [
+  this.select = [
     {
       title: 'ion-select',
       url: '/ion-select',
@@ -433,7 +732,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public slides = [
+  this.slides = [
     {
       title: 'ion-slides',
       url: '/ion-slides',
@@ -444,7 +743,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public tabs = [
+  this.tabs = [
     {
       title: 'ion-tabs',
       url: '/ion-tabs',
@@ -463,7 +762,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public toast = [
+  this.toast = [
     {
       title: 'ion-toast',
       url: '/ion-toast',
@@ -474,14 +773,14 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public toggle = [
+  this.toggle = [
     {
       title: 'ion-toggle',
       url: '/ion-toggle',
     },
   ];
 
-  public toolbar = [
+  this.toolbar = [
     {
       title: 'ion-toolbar',
       url: '/ion-toolbar',
@@ -508,7 +807,7 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public typography = [
+  this.typography = [
     {
       title: 'ion-anchor',
       url: '/ion-anchor',
@@ -519,26 +818,15 @@ export class ApiIndexPage implements OnInit {
     },
   ];
 
-  public api_index = [
+  this.api_index = [
     {
       title: 'API Index',
       url: '/api-index',
     },
   ];
-
-  @ViewChild(IonContent, { static: false }) ioncontent: IonContent;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  ScrollToBottom() {
-    this.ioncontent.scrollToBottom(500);
+}
 }
 
-  ScrollToTop() {
-    this.ioncontent.scrollToTop(500);
-}
-
+export interface Arrays {
+  title : string; 
 }

@@ -16,14 +16,21 @@ export class IonSearchbarPage implements OnInit {
   }
 
   items: any[];
+  items2: any[];
 
   filterItems(event) {
 
     this.initializeItems();
     const val = event.target.value;
     if (val && val.trim() != '') {
-      this.items = this.items.filter((item: ResProject) => {
+      this.items = this.items.filter((item: Arrays) => {
         return (item.value.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+
+    if (val && val.trim() != '') {
+      this.items2 = this.items2.filter((items2: Arrays) => {
+        return (items2.value.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
@@ -34,10 +41,15 @@ export class IonSearchbarPage implements OnInit {
       { value: "Two" }, 
       { value: "Three" },
       { value: "Four" }, 
-      { value: "Five" }];
+      { value: "Five" },
+      { value: "six" }];
+
+      this.items2 = [
+        { value: "six" },
+        { value: "seven" }];
   }
 }
 
-export interface ResProject {
+export interface Arrays {
   value : string; 
 }
