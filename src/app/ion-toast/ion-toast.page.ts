@@ -9,6 +9,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 })
 export class IonToastPage implements OnInit {
 
+  name: string;
+  brithday: any;
+
   constructor(private toastController: ToastController,
     private iab: InAppBrowser,
     ) {}
@@ -30,14 +33,31 @@ export class IonToastPage implements OnInit {
     toast.present();
   }
 
-
-  async showToast(position: string) {
+  async showToastTop() {
     const toast = await this.toastController.create({
       message: 'Mmmm, buttered toast',
       duration: 1000,
-      position: position,
+      position: 'top',
     });
-    toast.present(toast);
+    toast.present();
+  }
+
+  async showToastMiddle() {
+    const toast = await this.toastController.create({
+      message: 'Mmmm, buttered toast',
+      duration: 1000,
+      position: 'middle',
+    });
+    toast.present();
+  }
+
+  async showToastBottom() {
+    const toast = await this.toastController.create({
+      message: 'Mmmm, buttered toast',
+      duration: 1000,
+      position: 'bottom',
+    });
+    toast.present();
   }
 
   async showToastWithCloseButton() {
@@ -55,26 +75,5 @@ export class IonToastPage implements OnInit {
       duration: 4000,
     });
     toast.present();
-  }
-
-  async save() {
-    console.log(this.brithday);
-    debugger
-    if (this.name && this.brithday) {
-      const toast = await this.toastController.create({
-        message: 'User profile was saved successfully',
-        position: 'bottom',
-        duration: 3000
-      });
-      toast.present();
-    } else {
-      const toast = await this.toastController.create({
-        message: 'User profile field is not filled',
-        position: 'bottom',
-        duration: 3000
-      });
-      toast.present();
-    }
-
   }
 }
