@@ -429,6 +429,10 @@ const routes: Routes = [
   {
     path: 'back-button-forward',
     loadChildren: () => import('./back-button-forward/back-button-forward.module').then( m => m.BackButtonForwardPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   }
 
 ];

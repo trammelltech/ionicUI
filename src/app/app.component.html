@@ -394,6 +394,16 @@
             </ion-item>
           </ion-menu-toggle>
 
+          <ion-item style="color:#b2becd">ABOUT</ion-item>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of about">
+            <ion-item detail='false' style="color:#8392a5" lines="none" [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
           <ion-item lines="none">
             <ion-label (click)="ScrollToTop()" align="right" style="color:#8392a5">
               <i>to top</i></ion-label>

@@ -55,6 +55,7 @@ export class AppComponent {
   toolbar: any[];
   typography: any[];
   api_index: any[];
+  about: any[];
 
   constructor(
     private platform: Platform,
@@ -851,6 +852,13 @@ filterItems(event) {
       {
         title: 'API Index',
         url: '/api-index',
+      },
+    ];
+
+    this.about = [
+      {
+        title: 'About',
+        url: '/about',
       },
     ];
   }
