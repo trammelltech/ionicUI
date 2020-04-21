@@ -48,7 +48,7 @@ export class IonActionSheetPage {
         }
       }, {
         text: 'Play (open modal)',
-        icon: 'arrow-dropright-circle',
+        icon: 'play',
         handler: () => {
           console.log('Play clicked');
         }

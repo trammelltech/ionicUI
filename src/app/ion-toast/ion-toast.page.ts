@@ -63,8 +63,9 @@ export class IonToastPage implements OnInit {
   async showToastWithCloseButton() {
     const toast = await this.toastController.create({
       message: 'Your files were successfully saved',
-      showCloseButton: true,
-      closeButtonText: 'Ok'
+      buttons: [{
+        text: 'Close',
+        role: 'cancel'}]
     });
     toast.present();
   }
